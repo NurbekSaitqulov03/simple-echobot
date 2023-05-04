@@ -6,13 +6,9 @@ from main import start
 
 
 app = Flask(__name__)
-TOKEN = '5961200046:AAH4p8t9oPXRr9zCbpZMoxUyVP6ZrPKV_rY'
+TOKEN = '5925963662:AAEV877ngAyEkhmJE-rLw6536m2JqnQzJlc'
 
 bot: Bot = Bot(TOKEN)
-
-@app.route('/')
-def hello_world():
-    return 'Hello from Flask!'
 
 
 @app.route('/bot', methods=['POST', 'GET'])
@@ -35,3 +31,4 @@ def webhookbot():
         dp.process_update(update)
 
         return {"status": 200}
+    
